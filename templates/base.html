@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css">
+</head>
+<body>
+{% block content -%}
+{%- block main_menu -%}
+<ul class="main_menu">
+    {% for m in main_menu -%}
+    <li><a href="{{m.url}}">{{m.name}}</a></li>
+    {% endfor -%}
+</ul>
+{% endblock main_menu -%}
+<div class="clear"></div>
+{% endblock -%}
+</body>
+</html>
